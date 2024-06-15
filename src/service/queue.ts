@@ -1,12 +1,10 @@
-import type { TPosition } from "../types";
-
 export class Queue {
-  private queue: TPosition[];
+  private queue: number[];
 
   constructor() {
     this.queue = [];
   }
-  enqueue(val: TPosition) {
+  enqueue(val: number) {
     this.queue.push(val);
   }
   dequeue() {
@@ -17,5 +15,11 @@ export class Queue {
   }
   isEmpty() {
     return this.size() === 0;
+  }
+  print() {
+    console.log(this.queue);
+  }
+  includes(val: number) {
+    return this.queue.includes(val);
   }
 }
